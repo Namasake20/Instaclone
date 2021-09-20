@@ -7,16 +7,19 @@
         <img src="https://image.shutterstock.com/image-photo/kazan-russia-october-27-2016-260nw-506008927.jpg" class="rounded-circle">
         </div>
         <div class="col-9 pt-5">
-        <div><h1>{{ $user ->username}}</h1></div>
+        <div class="d-flex justify-content-between align-items-baseline">
+            <h1>{{ $user ->username}}</h1>
+            <a href="/p/create">Add New Post</a>
+        </div>
         <div class="d-flex">
-        <div class="pr-5"><strong>153</strong> posts</div>
+        <div class="pr-5"><strong>{{$user->posts->count()}}</strong> posts</div>
         <div class="pr-5"><strong>50k</strong> followers</div>
         <div class="pr-5"><strong>300</strong> following</div>
         
         </div>
-        <div class="pt-4">Techcousins.com</div>
-        <div>Techcousins Limited is a software solutions company based in Nairobi,Kenya.We are experts in providng 
-        business solutions in terms of Mobile and Web Applications.</div>
+        <div class="pt-4">{{$user->profile}}</div>
+        <div>{{$user->profile}}</div>
+        <div><a href="#">{{$user->profile}}</a></div>
         </div>
     </div>
     <div class="row pt-5">
